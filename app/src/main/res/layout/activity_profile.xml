@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/egg"
+    tools:context=".LoginActivity">
+
+    <!--header-->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/headerTitle"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/white"
+            android:fontFamily="@font/dmsans"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/green"
+            android:textSize="22dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/favs1"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="320dp"
+            android:src="@drawable/heart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/chat"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="360dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/chat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </RelativeLayout>
+
+    <!--banner-->
+    <RelativeLayout
+        android:id="@+id/bannerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <View
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:text="Account Information"
+            android:textSize="16dp"
+            android:fontFamily="@font/dmsans"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+
+    <!--content-->
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/bannerContainer">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <RelativeLayout
+                android:id="@+id/detailsContainer"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/accountIcon"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/icon"
+                    />
+
+                <TextView
+                    android:id="@+id/accountName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="Shams Cervales"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/dmsans"
+                    android:textColor="@color/black"
+                    android:layout_toEndOf="@id/accountIcon"
+                    />
+
+                <ImageView
+                    android:id="@+id/accountLocationIcon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/location"
+                    android:layout_below="@id/accountName"
+                    android:layout_toEndOf="@id/accountIcon"
+                    />
+
+                <TextView
+                    android:id="@+id/accountLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_marginTop="1dp"
+                    android:text="Pasay City"
+                    android:fontFamily="@font/dmsans"
+                    android:layout_below="@id/accountName"
+                    android:layout_toEndOf="@id/accountLocationIcon"
+                    />
+
+                <TextView
+                    android:id="@+id/productCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Products"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/dmsans"
+                    android:layout_below="@id/accountIcon"
+                    android:layout_alignStart="@id/accountIcon"
+                    />
+
+                <TextView
+                    android:id="@+id/productIndex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="2 Items"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/dmsans"
+                    android:layout_below="@id/productCount"
+                    android:layout_alignStart="@id/productCount"
+                    />
+
+                <TextView
+                    android:id="@+id/joined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="60dp"
+                    android:text="Date Joined"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/dmsans"
+                    android:layout_toEndOf="@id/productCount"
+                    android:layout_below="@id/accountIcon"
+                    />
+
+                <TextView
+                    android:id="@+id/joinedDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Sep 23, 2020"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/dmsans"
+                    android:layout_below="@id/productCount"
+                    android:layout_alignStart="@id/joined"
+                    />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="280dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_g"
+                android:clickable="true"
+                android:fontFamily="@font/inter"
+                android:gravity="center"
+                android:text="Logout"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailsContainer"/>
+
+            <!--products-->
+            <TextView
+                android:id="@+id/listedProductTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/title_primary"
+                android:fontFamily="@font/dmsans"
+                android:gravity="center"
+                android:paddingVertical="15dp"
+                android:text="Listed Products"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logout"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listedProducts_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                app:layout_constraintTop_toBottomOf="@id/listedProductTitle"
+                tools:layout_editor_absoluteX="0dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!--Footer-->
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <RelativeLayout
+            android:id="@+id/homeContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/homeIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/home"
+                />
+
+            <TextView
+                android:id="@+id/homeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Home"
+                android:textColor="@color/black"
+                android:fontFamily="@font/dmsans"
+                android:layout_below="@id/homeIcon"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/favsContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/favsIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/heart"
+                />
+
+            <TextView
+                android:id="@+id/favsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Favorites"
+                android:textColor="@color/black"
+                android:fontFamily="@font/dmsans"
+                android:layout_below="@id/favsIcon"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/uploadContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/uploadIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/upload"
+                />
+
+            <TextView
+                android:id="@+id/uploadText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Upload"
+                android:textColor="@color/black"
+                android:fontFamily="@font/dmsans"
+                android:layout_below="@id/uploadIcon"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/accountContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/profileIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/profile"
+                />
+
+            <TextView
+                android:id="@+id/accountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Account"
+                android:textColor="@color/black"
+                android:fontFamily="@font/dmsans"
+                android:layout_below="@id/profileIcon"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductActivity"
+    android:background="@color/egg"
+    >
+
+    <!--header-->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <TextView
+            android:id="@+id/headerTitle"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/cornerstyle"
+            android:fontFamily="@font/dmsans"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/green"
+            android:textSize="22dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/favs1"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="320dp"
+            android:src="@drawable/heart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/chat"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="360dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/chat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </RelativeLayout>
+    <!--footer-->
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/cornerstyle"
+        >
+
+        <RelativeLayout
+            android:id="@+id/homeContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/homeIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/home"
+                />
+
+            <TextView
+                android:id="@+id/homeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Home"
+                android:textColor="@color/black"
+                android:fontFamily="@font/dmsans"
+                android:layout_below="@id/homeIcon"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/favsContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/favsIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/heart"
+                />
+
+            <TextView
+                android:id="@+id/favsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Favorites"
+                android:textColor="@color/black"
+                android:fontFamily="@font/dmsans"
+                android:layout_below="@id/favsIcon"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/uploadContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/uploadIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/upload"
+                />
+
+            <TextView
+                android:id="@+id/uploadText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Upload"
+                android:textColor="@color/black"
+                android:fontFamily="@font/dmsans"
+                android:layout_below="@id/uploadIcon"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/accountContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/accountIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/profile"
+                />
+
+            <TextView
+                android:id="@+id/accountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Account"
+                android:textColor="@color/black"
+                android:fontFamily="@font/dmsans"
+                android:layout_below="@id/accountIcon"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <!--content-->
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/header">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <!--banner-->
+            <RelativeLayout
+                android:id="@+id/bannerContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/cornerstyle"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/chevron"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:text="Item Name"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/inter"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/imageContainer"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/bannerContainer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/roundstyle">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/tops"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/detailsContainer"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:padding="20dp"
+                app:layout_constraintTop_toBottomOf="@id/imageContainer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/roundstyle">
+
+                <RelativeLayout
+                    android:id="@+id/titleContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:id="@+id/productName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Item Name"
+                        android:textSize="24dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/dmsans"
+                        />
+
+                    <TextView
+                        android:id="@+id/productPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/productName"
+                        android:paddingBottom="10dp"
+                        android:text="100php"
+                        android:textSize="18dp"
+                        android:textColor="@color/green"
+                        android:fontFamily="@font/dmsans"
+                        />
+
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/ghost"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/sellerContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titleContainer"
+                    android:padding="10dp"
+                    >
+                    <ImageView
+                        android:id="@+id/icon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/icon"
+                        />
+
+                    <TextView
+                        android:id="@+id/accountName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/icon"
+                        android:paddingLeft="5dp"
+                        android:layout_marginLeft="15dp"
+                        android:text="Shams Cervales"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/dmsans"
+                        android:textColor="@color/black"
+                        android:layout_toEndOf="@id/icon"
+                        />
+
+                    <ImageView
+                        android:id="@+id/accountLocationIcon"
+                        android:layout_width="15dp"
+                        android:layout_height="16dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/location"
+                        android:layout_below="@id/accountName"
+                        android:layout_toEndOf="@id/icon"
+                        />
+
+                    <TextView
+                        android:id="@+id/accountLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="3dp"
+                        android:paddingLeft="5dp"
+                        android:text="Pasay City"
+                        android:fontFamily="@font/dmsans"
+                        android:layout_below="@id/accountName"
+                        android:layout_toEndOf="@id/accountLocationIcon"
+                        />
+
+                    <ImageView
+                        android:id="@+id/inspect"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/chevronright"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:alpha="0.5"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/descriptionContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sellerContainer"
+                    >
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/ghost"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/productTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:text="Product Description"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/dmsans"
+                        android:textSize="18dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/productDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/productTitle"
+                        android:paddingTop="10dp"
+                        android:text="This t-shirt features a bold and eye-catching graphic print on the front, showcasing your unique sense of style. The vibrant colors and intricate details are sure to turn heads and make a statement. The print is fade-resistant and durable, so you can enjoy it for years to come. \n\n With a relaxed fit and a range of sizes to choose from, this t-shirt is designed to flatter all body types. It's easy to care for and can be machine-washed and tumble-dried without losing its shape or color."
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/inter"
+                        android:textSize="12dp"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/buttonsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/descriptionContainer"
+                    android:paddingTop="10dp"
+                    >
+
+                        <Button
+                            android:id="@+id/btnFavorite"
+                            android:layout_width="130dp"
+                            android:layout_height="45dp"
+                            android:text="Favorite"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/inter"
+                            android:textStyle="bold"
+                            android:textSize="12dp"
+                            android:background="@drawable/button_r"
+                            android:layout_alignParentStart="true"
+                            />
+                        <Button
+                            android:id="@+id/btnChat"
+                            android:layout_width="130dp"
+                            android:layout_height="45dp"
+                            android:text="Chat Seller"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/inter"
+                            android:textStyle="bold"
+                            android:textSize="12dp"
+                            android:background="@drawable/button_g"
+                            android:layout_alignParentEnd="true"
+                            />
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</RelativeLayout>

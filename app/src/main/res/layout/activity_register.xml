@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/egg"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".LoginActivity"
+        android:padding="20dp"
+        >
+
+        <TextView
+            android:id="@+id/activity_register_tv_welcome"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/roundstyle"
+            android:layout_marginTop="80dp"
+            android:bottomLeftRadius="200dp"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/green"
+            android:fontFamily="@font/inter"
+            android:textSize="27dp"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/activity_register_tv_createYourAccount"
+            android:layout_width="325dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/registertoaccount"
+            android:textSize="26sp"
+            android:fontFamily="@font/inter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_register_tv_welcome"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/activity_register_tv_email"
+            android:layout_width="325dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Email Address"
+            android:textSize="16sp"
+            android:fontFamily="@font/inter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_register_tv_createYourAccount"
+            ></TextView>
+
+        <EditText
+            android:id="@+id/activity_register_et_email"
+            android:layout_width="325dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/roundstyle"
+            android:paddingLeft="10dp"
+            android:fontFamily="@font/inter"
+            android:hint="e.g. example@gmail.com"
+            android:textSize="14dp"
+            android:textColor="@color/ghost"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_register_tv_email"
+            ></EditText>
+
+        <TextView
+            android:id="@+id/activity_register_tv_username"
+            android:layout_width="325dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Username"
+            android:textSize="16sp"
+            android:fontFamily="@font/inter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_register_et_email"
+            ></TextView>
+
+        <EditText
+            android:id="@+id/activity_register_et_username"
+            android:layout_width="325dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/roundstyle"
+            android:paddingLeft="10dp"
+            android:fontFamily="@font/inter"
+            android:hint="e.g. example1234"
+            android:textSize="14dp"
+            android:textColor="@color/ghost"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_register_tv_username"
+            ></EditText>
+
+        <TextView
+            android:id="@+id/activity_register_tv_password"
+            android:layout_width="325dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter"
+            android:text="Password"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_register_et_username"
+            ></TextView>
+
+        <EditText
+            android:id="@+id/activity_register_et_password"
+            android:layout_width="325dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/roundstyle"
+            android:fontFamily="@font/inter"
+            android:hint="********"
+            android:paddingLeft="10dp"
+            android:textColor="@color/ghost"
+            android:textSize="14dp"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_register_tv_password"
+            ></EditText>
+
+        <TextView
+            android:id="@+id/activity_register_tv_confirmPassword"
+            android:layout_width="325dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter"
+            android:text="Confirm Password"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_register_et_password"
+            ></TextView>
+
+        <EditText
+            android:id="@+id/activity_register_et_confirmPassword"
+            android:layout_width="325dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/roundstyle"
+            android:fontFamily="@font/inter"
+            android:hint="********"
+            android:paddingLeft="10dp"
+            android:textColor="@color/ghost"
+            android:textSize="14dp"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_register_tv_confirmPassword"
+            ></EditText>
+
+        <TextView
+            android:id="@+id/activity_register_tv_firstname"
+            android:layout_width="325dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter"
+            android:text="First Name"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_register_et_confirmPassword"
+            ></TextView>
+
+        <EditText
+            android:id="@+id/activity_register_et_firstname"
+            android:layout_width="325dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/roundstyle"
+            android:fontFamily="@font/inter"
+            android:paddingLeft="10dp"
+            android:textColor="@color/ghost"
+            android:textSize="14dp"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_register_tv_firstname"
+            ></EditText>
+
+        <TextView
+            android:id="@+id/activity_register_tv_lastname"
+            android:layout_width="325dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter"
+            android:text="Last Name"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_register_et_firstname"
+            ></TextView>
+
+        <EditText
+            android:id="@+id/activity_register_et_lastname"
+            android:layout_width="325dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/roundstyle"
+            android:fontFamily="@font/inter"
+            android:paddingLeft="10dp"
+            android:textColor="@color/ghost"
+            android:textSize="14dp"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_register_tv_lastname"
+            ></EditText>
+
+        <TextView
+            android:id="@+id/activity_register_tv_phonenumber"
+            android:layout_width="325dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter"
+            android:text="Phone Number"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_register_et_lastname"
+            ></TextView>
+
+        <EditText
+            android:id="@+id/activity_register_et_phonenumber"
+            android:layout_width="325dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/roundstyle"
+            android:fontFamily="@font/inter"
+            android:paddingLeft="10dp"
+            android:textColor="@color/ghost"
+            android:textSize="14dp"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_register_tv_phonenumber"
+            ></EditText>
+
+        <TextView
+            android:id="@+id/activity_register_tv_address"
+            android:layout_width="325dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter"
+            android:text="Full Address"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_register_et_phonenumber"
+            ></TextView>
+
+        <EditText
+            android:id="@+id/activity_register_et_address"
+            android:layout_width="325dp"
+            android:layout_height="40dp"
+            android:background="@drawable/roundstyle"
+            android:fontFamily="@font/inter"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textColor="@color/ghost"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_register_tv_address"></EditText>
+
+        <TextView
+            android:id="@+id/activity_register_tv_city"
+            android:layout_width="325dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter"
+            android:text="City"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_register_et_address"
+            ></TextView>
+
+        <EditText
+            android:id="@+id/activity_register_et_city"
+            android:layout_width="325dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/roundstyle"
+            android:fontFamily="@font/inter"
+            android:paddingLeft="10dp"
+            android:textColor="@color/ghost"
+            android:textSize="14dp"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_register_tv_city"
+            ></EditText>
+
+        <Button
+            android:id="@+id/activity_register_btn_register"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_g"
+            android:text="Register"
+            android:textColor="@color/white"
+            android:fontFamily="@font/inter"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_register_et_city"/>
+
+        <TextView
+            android:id="@+id/activity_register_tv_loginHere"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter"
+            android:text="@string/login"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_register_btn_register"></TextView>
+
+        <ProgressBar
+            android:id="@+id/activity_register_pg_progressBar"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_register_tv_loginHere"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

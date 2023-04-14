@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadActivity"
+    android:background="@color/egg"
+    >
+
+    <!--header-->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <TextView
+            android:id="@+id/headerTitle"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/cornerstyle"
+            android:fontFamily="@font/dmsans"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/green"
+            android:textSize="22dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/favs1"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="320dp"
+            android:src="@drawable/heart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/chat"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="360dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/chat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </RelativeLayout>
+    <!--footer-->
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/cornerstyle"
+        >
+
+        <RelativeLayout
+            android:id="@+id/homeContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/homeIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/home"
+                />
+
+            <TextView
+                android:id="@+id/homeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Home"
+                android:textColor="@color/black"
+                android:fontFamily="@font/dmsans"
+                android:layout_below="@id/homeIcon"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/favsContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/favsIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/heart"
+                />
+
+            <TextView
+                android:id="@+id/favsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Favorites"
+                android:textColor="@color/black"
+                android:fontFamily="@font/dmsans"
+                android:layout_below="@id/favsIcon"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/uploadContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/uploadIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/upload"
+                />
+
+            <TextView
+                android:id="@+id/uploadText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Upload"
+                android:textColor="@color/black"
+                android:fontFamily="@font/dmsans"
+                android:layout_below="@id/uploadIcon"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/accountContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/accountIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/profile"
+                />
+
+            <TextView
+                android:id="@+id/accountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Account"
+                android:textColor="@color/black"
+                android:fontFamily="@font/dmsans"
+                android:layout_below="@id/accountIcon"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--content-->
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <RelativeLayout
+                android:id="@+id/upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                >
+
+                <View
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/roundstyle"
+                    android:padding="16dp" />
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/plus"
+                    android:padding="16dp"
+                    android:alpha="0.5"/>
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:id="@+id/productName"
+                android:layout_width="325dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/upload"
+                android:layout_marginTop="20dp"
+                android:text="Product Name"
+                android:textSize="16sp"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/inter"/>
+
+            <EditText
+                android:id="@+id/etProductName"
+                android:layout_width="325dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/productName"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/roundstyle"
+                android:paddingLeft="10dp"
+                android:fontFamily="@font/inter"
+                android:hint="name of product"
+                android:textSize="14dp"
+                android:textColor="@color/ghost"
+                android:inputType="text"
+                />
+
+            <TextView
+                android:id="@+id/productPrice"
+                android:layout_width="325dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/etProductName"
+                android:layout_marginTop="20dp"
+                android:text="Product Price"
+                android:textSize="16sp"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/inter"/>
+
+            <EditText
+                android:id="@+id/etProductPrice"
+                android:layout_width="325dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/productPrice"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/roundstyle"
+                android:paddingLeft="10dp"
+                android:fontFamily="@font/inter"
+                android:hint="price of product"
+                android:textSize="14dp"
+                android:textColor="@color/ghost"
+                android:inputType="text"
+                />
+
+            <TextView
+                android:id="@+id/sellerContact"
+                android:layout_width="325dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/etProductPrice"
+                android:fontFamily="@font/inter"
+                android:text="Contact Number"
+                android:layout_centerHorizontal="true"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etSellerContact"
+                android:layout_width="325dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/sellerContact"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/roundstyle"
+                android:paddingLeft="10dp"
+                android:fontFamily="@font/inter"
+                android:hint="contact number"
+                android:textSize="14dp"
+                android:textColor="@color/ghost"
+                android:inputType="text"
+                />
+
+            <TextView
+                android:id="@+id/productCategory"
+                android:layout_width="325dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/etSellerContact"
+                android:fontFamily="@font/inter"
+                android:text="Category"
+                android:layout_centerHorizontal="true"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etProductCategory"
+                android:layout_width="325dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/productCategory"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/roundstyle"
+                android:paddingLeft="10dp"
+                android:fontFamily="@font/inter"
+                android:hint="category"
+                android:textSize="14dp"
+                android:textColor="@color/ghost"
+                android:inputType="text"
+                />
+            <TextView
+                android:id="@+id/productDescription"
+                android:layout_width="325dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/etProductCategory"
+                android:fontFamily="@font/inter"
+                android:text="Description"
+                android:layout_centerHorizontal="true"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etProductDescription"
+                android:layout_width="325dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/productDescription"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/roundstyle"
+                android:paddingLeft="10dp"
+                android:fontFamily="@font/inter"
+                android:hint="description"
+                android:textSize="14dp"
+                android:textColor="@color/ghost"
+                android:inputType="text"
+                />
+            <Button
+                android:id="@+id/btnUpload"
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/etProductDescription"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_g"
+                android:text="Upload"
+                android:textColor="@color/white"
+                android:fontFamily="@font/inter"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

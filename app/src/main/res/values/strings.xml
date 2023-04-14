@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name"><b>PareSell</b></string>
+    <string name="register">Don\'t have an account? <font color='#3D8361'><u>Register here</u></font>.</string>
+    <string name="login">Already have an account? <font color='#3D8361'><u>Login here</u></font>.</string>
+    <string name="logintoaccount"><font color='#3D8361'><b>Login</b></font> to your account</string>
+    <string name="registertoaccount"><font color='#3D8361'><b>Create</b></font> your account</string>
+    <string name="see_all"><font color='#3D8361'><u>See All</u></font></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
